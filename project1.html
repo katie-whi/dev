@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <style>
+        body {
+            background-color: #000; /* Черный фон */
+            color: white; /* Белый текст */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .discription{
+            width: 48vw;
+            height: auto;
+            margin-left: 4vw;
+            margin-top: 15vh;
+            text-align: left;
+        }
+
+        .back-link {
+            margin-top: 20px;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            border: 3px solid white;
+            padding: 10px;
+            width: 200px;
+            display: block;
+        }
+
+        .back-link:hover {
+            background-color: #444;
+        }
+
+        .cards{
+            height: auto;
+            width: 30vw;
+            margin-left:60vw;
+         
+        }
+    
+        .play{
+            width:30vw;
+            height: auto;
+        }
+
+        .seconds{
+            width: 30vw;
+            height: auto;
+            margin-top: 1vh;
+        }
+       
+        #view{
+      
+          margin-top:25vh;
+          margin-left: 75vw;
+        }
+
+        .advice{
+            text-align: left;
+            margin-top: 10vh;
+            margin-left: 4vw;
+            width:70%;
+        }
+        
+        #go{
+          
+            margin-top:10vh;
+            margin-left: 70vw;
+        }
+         
+        #back{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+            margin-top: 50vh;
+        }
+
+        .pic1{
+            margin-top: 70vh;
+            height:auto;
+            width: 10vw;
+            margin-left:5vw;
+        }
+  
+       
+        .pic2{
+            margin-left: 18vw;
+            height: auto;
+            width: 10vw;
+            margin-top: -85vh;
+        }
+
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+       
+
+
+        /* Для экранов до 1200px */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .discription {
+                width: 90%;
+                margin-top: 5vh;
+            }
+
+            .back-link {
+                width: 180px;
+            }
+
+            .cards, .play, .seconds {
+                max-width: 80%;
+            }
+                  .pic1{
+        margin-top: 40vh ;
+           }
+
+           .pic2{
+     margin-top: -35vh;
+           }
+         }
+
+        /* Для экранов до 992px */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .discription {
+                width: 85%;
+                margin-top: 10vh;
+            }
+
+            .cards, .play, .seconds {
+                max-width: 70%;
+            }
+
+            .back-link {
+                width: 160px;
+            }
+
+            .pic1{
+        margin-top: 40vh ;
+           }
+
+           .pic2{
+     margin-top: -35vh;
+           }
+        }
+        
+
+        /* Для экранов до 768px */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .discription {
+                width: 80%;
+                margin-top: 8vh;
+            }
+
+            .cards, .play, .seconds {
+                max-width: 90%;
+            }
+
+            .pic1, .pic2 {
+                max-width: 90%;
+            }
+
+            .back-link {
+                width: 140px;
+            }
+
+            .pic1{
+        margin-top: 20vh ;
+           }
+
+           .pic2{
+     margin-top: -25vh;
+           }
+           #back{
+            margin-top: 20vh;
+           }
+        }
+
+        /* Для экранов до 576px */
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .discription {
+                width: 100%;
+                margin-top: 5vh;
+            }
+
+            .back-link {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .cards, .play, .seconds, .pic1, .pic2 {
+                max-width: 100%;
+            }
+
+            #view, #go, #back {
+                font-size: 1rem;
+            }
+            
+            .pic1{
+        margin-top: 20vh ;
+           }
+
+           .pic2{
+     margin-top: -25vh;
+           }
+           #back{
+            margin-top: 20vh;
+           }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Project 1</h1>
+    <div class="container">
+    <div class="discription"><p>Want to test your MEMORY or INTUITION? In this game, you'll match cards with images, memorizing their positions on the game board. Each move is a step towards improving your cognitive skills, concentration, and attention.</p>
+    <p>The project is implemented using JavaScript with the ability to play and track time.You can also find out how many times you succeed on the first try.</p></div>
+    <div class="cards"> <img src="cardsbw.gif" onmouseover="this.src='cards.gif'" onmouseout="this.src='cardsbw.gif'"/></div>
+    <div class="play"><img src="playbw.gif" onmouseover="this.src='play.gif'" onmouseout="this.src='playbw.gif'"/></div>
+    <div class="seconds"><img src="secondsbw.gif" onmouseover="this.src='seconds.gif'" onmouseout="this.src='secondsbw.gif'"/></div>
+    <a href="https://katie-whi.github.io/cards/" class="back-link" id="view">View project</a>
+    <div class="advice"><p>Immerse yourself in the magic of color. HOVER over the image to reveal its colours.</p></div>
+    <a href="https://github.com/katie-whi/cards" class="back-link" id="go">Go to github</a>
+    <div class="pic1"><img src="pic1bw.png" onmouseover="this.src='pic1.png'" onmouseout="this.src='pic1bw.png'"/></div>
+    <div class="pic2"><img src="pic2bw.png" onmouseover="this.src='pic2.png'" onmouseout="this.src='pic2bw.png'"/></div>
+    </div>
+    <a href="index.html" class="back-link" id="back">Back to Resume</a>
+</body>
+</html>

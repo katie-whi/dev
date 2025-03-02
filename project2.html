@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <style>
+        body {
+            background-color: #000; /* Черный фон */
+            color: white; /* Белый текст */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .back-link {
+            margin-top: 20px;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            border: 3px solid white;
+            padding: 10px;
+            width: 200px;
+            display: block;
+        }
+
+        .back-link:hover {
+            background-color: #444;
+        }
+     
+        .discription{
+            width: 48vw;
+            height: auto;
+            margin-left: 43vw;
+            
+            text-align: left;
+        }
+        .container{
+            display: flex;
+            flex-direction:row;
+            justify-content: baseline;
+            gap: 10px;
+            height: 80vh;
+        }
+       .container img {
+      height: 100%; 
+      object-fit: cover; 
+       }
+
+        .move {
+            height:100%;
+            width: auto;
+       }
+
+
+        .stairs {
+         height:100%;
+         width: auto; 
+        }
+
+        #view{
+            margin-left: 70vw;
+            margin-top: -70vh;
+        }
+
+        #go{
+            margin-left: 7vw;
+        }
+       .clock{
+        height: auto;
+        width: 50vw;
+        margin-top: 80vh;
+        margin-left: 50vw;
+       }
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+        #back{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40vh;
+        }
+   
+        @media (max-width: 1200px) {
+            .discription {
+                width: 60vw;
+                margin-left: 20vw;
+            }
+
+            .container img {
+                width: auto; 
+                height: 60vh;
+            }
+
+            .clock {
+                width: 80vw; 
+                margin-left: 10vw; 
+                
+            }
+
+            #go{
+                margin-top: -15vh;
+            margin-left: 7vw;
+        }
+
+    
+        }
+
+        @media (max-width: 1000px) {
+              #view{
+                margin-top:-4vh;
+                margin-left: 50vw;
+              }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px; 
+            }
+
+            p {
+                font-size: 16px; 
+            }
+
+            .back-link {
+                font-size: 16px;
+                padding: 8px;
+                width: 80%; 
+                margin-left: 10%;
+            }
+
+            .discription {
+                width: 80vw;
+                margin-left: 10vw; 
+            }
+
+       
+            .clock {
+                width: 100%; 
+               margin-left: auto;
+                margin-top: 10vh;
+            }
+            #view, #go, #back {
+                width: 70%; 
+                margin-left:auto;
+            }
+        
+            #view{
+                margin-top: 5vh;
+                margin-left: auto;
+            }
+        }
+         
+        
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px; 
+            }
+
+            p {
+                font-size: 14px; 
+            }
+
+            .discription {
+                width: 90vw;
+                margin-left: 5vw; 
+            }
+
+            .container img {
+                width: 40vw; 
+                height: 50vh;
+            }
+
+            .clock {
+                width: 100vw; 
+                margin-left: 0;
+            }
+
+            #view, #go, #back {
+                width: 90%; 
+                margin-left: 5%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Project 2</h1>
+    
+    <div class="container">
+    <div class="move"> <img src="movebw.png" onmouseover="this.src='move.png'" onmouseout="this.src='movebw.png'"/></div>
+    <div class="stairs"> <img src="stairsbw.gif" onmouseover="this.src='stairs.gif'" onmouseout="this.src='stairsbw.gif'"/></div>
+    </div>
+    <a href="https://github.com/katie-whi/stairs" class="back-link" id="go">Go to github</a>
+    <a href="https://katie-whi.github.io/stairs/" class="back-link" id="view">View project</a>  
+    <div class="clock"> <img src="clockbw.gif" onmouseover="this.src='clock.gif'" onmouseout="this.src='clockbw.gif'"/></div>
+    <div class="discription"><p>This poster website is designed to remind users of the importance of using time to its fullest for personal growth and development. The site features a powerful visual composition that inspires conscious and productive use of time, as well as continuous self-improvement.</p></div>
+    <a href="index.html" class="back-link" id="back">Back to Resume</a> 
+
+</body>
+</html>
+

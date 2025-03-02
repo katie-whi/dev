@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* black background for the whole page */
+            color: white; /* white text */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        a {
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+}
+
+        header {
+            background-color: #000; /* black background for the header */
+            padding: 40px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: white; /* white text in header */
+        }
+
+        .projects {
+            margin-top: 60px;
+        }
+
+        .projects h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: white; /* white text for the title */
+        }
+
+        .project-container {
+            display: flex;
+            flex-direction: column; /* elements will now be arranged vertically */
+            justify-content: center;
+            align-items: center; /* center alignment */
+            gap: 15vh; /* increase space between projects (6vh total) */
+        }
+
+        .project-wrapper {
+            position: relative; /* So that the see-more div can be positioned relative to it */
+            width: 75vw; /* width 75% of viewport */
+            height: calc(75vw * 9 / 16); /* height proportional to 16:9 aspect ratio */
+        }
+
+        .project {
+            width: 100%;
+            height: 100%;
+            background-size: cover; /* cover the entire div */
+            background-position: center; /* center the image */
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* vertically and horizontally center text */
+            font-size: 24px; /* font size for text */
+            text-transform: uppercase;
+            font-weight: bold;
+            overflow: hidden; /* Ensure that text is never cut off by the container */
+        }
+
+        /* Semi-transparent overlay */
+        .project::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(38, 38, 38, 0.9); /* semi-transparent gray */
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect: overlay disappears, and the text fades */
+        .project:hover::after {
+            background: rgba(94, 94, 94, 0.8); /* overlay disappears on hover */
+        }
+
+        .project:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Text styling for project labels */
+        .project span {
+            color: white; /* white text */
+            text-shadow: 2px 2px 4px #000000; /* black shadow for the outline effect */
+            position: absolute;
+            font-size: 36px; /* increase font size for better visibility */
+            opacity: 1; /* Initially the text is visible */
+            z-index: 10; /* Ensure the text is always on top of other elements */
+            transition: opacity 0.3s ease; /* smooth transition for text visibility */
+        }
+
+        /* Hide the text when hovering */
+        .project:hover span {
+            opacity: 0; /* Text fades out when hovering over the project */
+        }
+
+        /* New div for "See more..." appearing below the project */
+        .see-more {
+            width: 100%; /* Make it take the full width of the project */
+            height: 10vh; /* Height of 10% of the viewport */
+            background-color: #000; /* Black background */
+            color: white; /* White text */
+            font-size: 24px; /* Font size for text */
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: 2px solid white; /* White border around the div */
+            box-sizing: border-box;
+        }
+
+        /* Show the "See more..." block when hovering over the respective project */
+        .project-wrapper:hover .see-more {
+            display: flex; /* Make the "See more..." block visible when hovering */
+        }
+
+        /* Media Queries for mobile */
+        @media (max-width: 768px) {
+            .project-wrapper {
+                width: 90vw; /* increase project size on mobile */
+                height: calc(90vw * 9 / 16); /* proportional height for mobile */
+            }
+            .project span {
+                font-size: 28px; /* reduce font size on smaller screens */
+            }
+            .see-more {
+                font-size: 18px; /* smaller font size for "See more..." on mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px; /* reduce header font size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Frontend Developer Resume</h1>
+</header>
+<p>With a deep interest in creating user-friendly and intuitive interfaces, I focus on the user in my work and always strive to create an interface that is both convenient and pleasant to use.</p>
+<div class="projects">
+    <h2>Projects</h2>
+    <div class="project-container">
+        <div class="project-wrapper">
+            <div class="project" style="background-image: url('cardsbw.png');">
+                <span>Project 1</span>
+            </div>
+            <a href="project1.html" class="see-more">See More...</a> <!-- Link to a new page -->
+        </div>
+
+        <div class="project-wrapper">
+            <div class="project" style="background-image: url('stairsbw.png');">
+                <span>Project 2</span>
+            </div>
+            <a href="project2.html" class="see-more">See More...</a> <!-- Link to a new page -->
+        </div>
+
+        <div class="project-wrapper">
+            <div class="project" style="background-image: url('wheelbw.png');">
+                <span>Project 3</span>
+            </div>
+            <a href="project3.html" class="see-more">See More...</a> <!-- Link to a new page -->
+        </div>
+    </div>
+</div>
+<footer style="background-color: #000; color: white; text-align: center; padding: 20px;">
+    <p style="margin-top: 20vh;">Contact: <img src="https://img.icons8.com/ios/50/ffffff/mail.png" alt="email icon" style="vertical-align: middle; margin-right: 5px;">whi.kate71@gmail.com</a> - Kateryna</p>
+  </footer>
+  
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+    <style>
+        body {
+            background-color: #000; /* Черный фон */
+            color: white; /* Белый текст */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }   
+        
+        .container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+        .first_line, .second_line, .trird_line {
+            display: flex;
+        }
+
+        .discription{
+            width: 48vw;
+            height: auto;
+            margin-left: 43vw;
+            margin-top: 15vh;
+            text-align: left;
+            box-sizing: border-box;
+            word-wrap: break-word;
+        }
+        p {
+            font-size: 18px;
+            padding-bottom:1vh;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            border: 3px solid white;
+            padding: 10px;
+            width: 200px;
+        }
+
+        .back-link:hover {
+            background-color: #444;
+        }
+       
+        #view{
+            margin-top: 3vh;
+            margin-left: 77.5vw;
+
+        }
+
+
+        .advice{
+            text-align: left;
+            margin-top: 10vh;
+            margin-left: 4vw;
+            width:70%;
+        }
+
+        .advice p{
+            padding-bottom: 0;
+        }
+
+        #go{
+            margin-top: 20vh;
+            margin-bottom: 3vh;
+            margin-left: 3vw;
+        }
+
+        #back{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40vh;
+        }
+
+
+
+       .hamster{
+         height: auto;
+         width: 20vw;
+         margin-left:10wv;
+         margin-top: -9vh;
+        }
+
+        .page{
+           height: auto;
+           width: 12vw;
+           margin-left:25vw;
+           margin-top: -19vh;
+           position: relative;
+        }
+
+        .page::after {
+            content: '';
+            position: absolute;
+            top: 0;   
+            left: 0;  
+            right: 0; 
+            bottom: 0; 
+            background: rgba(38, 38, 38, 0.781);
+            z-index: 1;
+        }
+        .page:hover::after {
+        background-image: url('page.png'); 
+         width: 12vw;
+         height: auto;
+         background-size: contain;
+}
+      
+        .two_flowers{
+            height: auto;
+            width: 25vw;
+            margin-left:50vw;
+            margin-top: -20vh;
+       }
+
+
+        .flowers{
+        height: auto;
+         width: 20vw;
+        }
+
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+
+
+        @media (max-width: 1200px) {
+            .discription {
+                width: 70vw;
+                margin-left:auto;
+                margin-right: auto;
+                margin-top: 5vh;
+            }
+
+            .container {
+                justify-content: center;
+            }
+
+            .hamster
+            {
+                width: 25vw;
+                margin-left:10vw;
+               margin-top: auto;
+            }
+            .page{
+                width: 25vw;
+                margin-left: 40vw;
+                margin-top: -25vw;
+            }
+
+            .page::after {
+            content: '';
+            position: absolute;
+            top: 0;   
+            left: 0;  
+            right: 0; 
+            bottom: 0; 
+            background: rgba(38, 38, 38, 0.781);
+            z-index: 1;
+        }
+        .page:hover::after {
+        background-image: url('page.png'); 
+         width: 25vw;
+         height: auto;
+         background-size: contain;
+}
+      
+ .second_line{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+ }
+
+.two_flowers{
+            height: auto;
+            width: 25vw;
+           margin-top: 20vh;
+       }
+
+
+        .flowers{
+        height: auto;
+         width: 25vw;
+        }
+            #view, #go, #back {
+                width: 180px;
+                font-size: 16px;
+            }
+
+            .advice {
+              
+                margin-left: 6vw;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .discription {
+                width: 80vw;
+                margin-left: 10vw;
+                margin-top: 5vh;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+                gap: 5vh;
+            }
+
+            .hamster,
+            .page,
+            .two_flowers,
+            .flowers {
+                width: 60vw;
+                margin-top: 0;
+            }
+            .page::after {
+            content: '';
+            position: absolute;
+            top: 0;   
+            left: 0;  
+            right: 0; 
+            bottom: 0; 
+            background: rgba(38, 38, 38, 0.781);
+            z-index: 1;
+        }
+        .page:hover::after {
+        background-image: url('page.png'); 
+         width: 60vw;
+         height: auto;
+         background-size: contain;
+}
+
+            .advice {
+              width: 100%;
+                text-align: center;
+            }
+
+            #view, #go, #back {
+                width: 160px;
+                font-size: 16px;
+            }
+           #back{
+            margin-top: 10vh;
+           }
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .discription {
+                width: 90vw;
+                margin-left: 5vw;
+                margin-top: 3vh;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+                gap: 4vh;
+            }
+
+            .hamster,
+            .page,
+            .two_flowers,
+            .flowers {
+                width: 80vw;
+                margin-top: 0;
+            }
+
+            #view, #go, #back {
+                width: 150px;
+                font-size: 14px;
+            }
+
+            .advice {
+               width: 100%;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+    </style>
+    </style>
+</head>
+<body>
+
+    <h1>Project 3</h1>
+    
+    <div class="container">
+        <div class="first_line">
+        <div class="discription"><p>This project is a stylish and vibrant webpage created to lift the spirits and add a little joy to everyday life. All animations and visual effects were designed using only CSS, which made the implementation process simple. Smooth transitions and dynamic elements help create an atmosphere of positivity.</p>
+        <p>The simplicity of the implementation and the clean code allow you to enjoy  the result. This project serves as a great reminder of how small details can greatly enhance the experience of a webpage.</p></div>
+        </div>
+        <div class="hamster"> <img src="hamsterbw.gif" onmouseover="this.src='hamster.gif'" onmouseout="this.src='hamsterbw.gif'"/></div>
+        <div class="page"> <img src="pagebw.png" onmouseover="this.src='page.png'" onmouseout="this.src='pagebw.png'"/></div>
+    </div>
+    <div  class="second_line">
+         <div class="advice"><p>Immerse yourself in the magic of color. HOVER over the image to reveal its colours.</p></div>
+    <div class="two_flowers"> <img src="two_flowersbw.gif" onmouseover="this.src='two_flowers.gif'" onmouseout="this.src='two_flowersbw.gif'"/></div>
+    
+   
+    </div>
+    <a href="https://katie-whi.github.io/hamster/" class="back-link" id="view">View project</a>   
+    <div class="third_line">
+    <a href="https://github.com/katie-whi/hamster" class="back-link" id="go">Go to github</a>
+    <div class="flowers"> <img src="flowersbw.gif" onmouseover="this.src='flowers.gif'" onmouseout="this.src='flowersbw.gif'"/></div>
+    <a href="index.html" class="back-link" id="back">Back to Resume</a> <!-- Ссылка назад на главную страницу -->
+    </div>
+</div>
+</body>
+</html>
